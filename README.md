@@ -1,30 +1,76 @@
 # Exif Cleaner for Seeker
 
-A privacy-focused mobile tool designed to remove metadata (Exif data) from your photos before sharing them online.
+A lightweight photo metadata cleaner designed for users who care about OpSec and privacy.
 
-[English](README.md) | [日本語](README_JA.md) | [Français](README_FR.md) | [Deutsch](README_DE.md) | [Italiano](README_IT.md) | [Español](README_ES.md) | [繁體中文](README_TW.md) | [简体中文](README_CN.md) | [한국어](README_KO.md) | [العربية](README_AR.md) 
+[English](README.md) | [日本語](README_JA.md) | [Français](README_FR.md) | [Deutsch](README_DE.md) | [Italiano](README_IT.md) | [Español](README_ES.md) | [繁體中文](README_TW.md) | [简体中文](README_CN.md) | [한국어](README_KO.md) | [العربية](README_AR.md)
 
-## Why Open Source?
+This app removes identifying metadata from photos **locally on your device**, before sharing them on platforms like X or Discord.
 
-**Your Privacy is Our Priority.**
-We believe that tools handling sensitive data should be transparent. By making this project open source, we allow anyone to inspect the code and verify that:
-- **No data is uploaded:** All processing happens 100% locally on your device.
-- **No hidden tracking:** We simply remove the metadata and save the clean image back to your library.
+**No tracking. No uploads. Fully offline.**
 
-## Features
+---
 
-- **Remove Exif Data:** Strips GPS location, camera settings, and other metadata.
-- **Offline Processing:** No internet connection required. Your photos never leave your phone.
-- **Batch Processing:** Select and clean multiple images at once.
+## ✨ Features
+
+- **Remove location data (GPS)**
+- **Remove device and camera identifiers**
+- **Remove software tags** such as "Taken on Seeker"
+- **Offline processing** (no network uploads)
+- **No analytics, no trackers**
 - **Multi-language Support:** English, Japanese, French, German, Italian, Spanish, Chinese (Traditional/Simplified), Korean, Arabic.
 - **Dark Mode:** Fully supported.
-- **Support the Developer:** Option to donate SOL to support the project.
 
-## How it works
+---
 
-1. Select photos from your gallery.
-2. The app creates a clean copy without metadata.
-3. Save the clean copy to your gallery or share it directly.
+## 🔐 Why this exists
+
+Photos often contain hidden metadata that can reveal:
+- where they were taken
+- when they were taken
+- which device or camera was used
+
+For users of **Solana Mobile Seeker**, this can include metadata like:
+- device model
+- camera software
+- strings such as `"Taken on Seeker"`
+
+This app helps reduce accidental metadata leaks before sharing images publicly.
+
+---
+
+## 🛡 Privacy & Security
+
+- All processing is done **locally on-device**
+- The app does **not** upload photos anywhere
+- No accounts, no wallets, no blockchain interaction
+- Minimal Android permissions, only what is required for media access
+
+---
+
+## 📱 Permissions
+
+The app only requests permissions necessary to access and clean photo metadata:
+- **Media access (images/videos):** To read and save photos.
+- **No microphone**
+- **No camera**
+- **No overlay permissions**
+
+---
+
+## ⚠️ Important Notes
+
+- This app removes **metadata**, not visual characteristics of photos.
+- It cannot guarantee full anonymity or prevent all forms of device fingerprinting.
+- Intended as an **OpSec hygiene tool**, not a privacy silver bullet.
+
+---
+
+## 🧪 Built With
+
+- Expo (React Native)
+- Android (APK distribution)
+
+---
 
 ## Development
 
@@ -34,7 +80,6 @@ This project is built with [Expo](https://expo.dev) and React Native.
 # Install dependencies
 npm install
 
-# Start the app
 # Start the app
 npx expo start
 ```
@@ -56,3 +101,9 @@ npx eas-cli build -p android --profile production
 > ```powershell
 > cmd /c npx eas-cli build -p android --profile preview
 > ```
+
+---
+
+## 📄 License
+
+MIT License
