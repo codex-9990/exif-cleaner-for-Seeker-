@@ -307,7 +307,7 @@ export default function App() {
     );
   };
 
-  const handlePrivacyPolicy = () => {
+  const handlePrivacyPolicy = async () => {
     // Linked to the raw markdown file in the repo based on locale
     const repoBase = 'https://github.com/codex-9990/exif-cleaner-for-Seeker/blob/main/';
     let filename = 'PRIVACY_POLICY.md'; // Default English
@@ -331,7 +331,18 @@ export default function App() {
       }
     }
 
-    Linking.openURL(repoBase + filename);
+    const url = repoBase + filename;
+    try {
+      const supported = await Linking.canOpenURL(url);
+      if (supported) {
+        await Linking.openURL(url);
+      } else {
+        Alert.alert(i18n.t('errorTitle'), "Cannot open link: " + url);
+      }
+    } catch (err) {
+      console.error("Link Error:", err);
+      Alert.alert(i18n.t('errorTitle'), "Failed to open Privacy Policy link.");
+    }
   };
 
   // --- RENDER HELPERS ---
