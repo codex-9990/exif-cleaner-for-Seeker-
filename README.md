@@ -2,7 +2,7 @@
 
 A privacy-focused mobile tool designed to remove metadata (Exif data) from your photos before sharing them online.
 
-[English](README.md) | [日本語](README_JA.md) 
+[English](README.md) | [日本語](README_JA.md) | [Français](README_FR.md) | [Deutsch](README_DE.md) | [Italiano](README_IT.md) | [Español](README_ES.md) | [繁體中文](README_TW.md) | [简体中文](README_CN.md) | [한국어](README_KO.md) | [العربية](README_AR.md) 
 
 ## Why Open Source?
 
