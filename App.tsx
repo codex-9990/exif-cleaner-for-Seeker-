@@ -308,8 +308,8 @@ export default function App() {
   };
 
   const handlePrivacyPolicy = () => {
-    // Replace with your actual Privacy Policy URL
-    Linking.openURL('https://example.com/privacy');
+    // Linked to the raw markdown file in the repo
+    Linking.openURL('https://github.com/codex-9990/exif-cleaner-for-Seeker/blob/main/PRIVACY_POLICY.md');
   };
 
   // --- RENDER HELPERS ---
